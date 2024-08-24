@@ -1,0 +1,15 @@
+.breadcrumb {
+  color: var(--color-off-dark);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.breadcrumb a:not(:hover, :focus) {
+  color: currentcolor;
+  text-decoration: none;
+}
+
+.breadcrumb.current {
+  color: var(--color-dark);
+  font-weight: 600;
+}

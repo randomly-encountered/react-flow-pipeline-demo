@@ -1,0 +1,26 @@
+.attribute {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.875rem;
+  text-align: left;
+  column-gap: 0.5rem;
+}
+
+.attribute-name {
+  color: var(--color-off-dark);
+  white-space: nowrap;
+}
+
+.attribute-name::after {
+  content: ':';
+}
+
+.attribute-value {
+  display: -webkit-box;
+  overflow-x: hidden;
+  column-gap: 0.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}

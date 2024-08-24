@@ -1,0 +1,86 @@
+.navigation-panel {
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  background: var(--color-brand-1);
+}
+
+.navigation-panel button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-light);
+  column-gap: 0.25em;
+  background: transparent;
+  border: none;
+}
+
+.app-nav {
+  display: flex;
+  flex-grow: 1;
+}
+
+.app-action-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.app-action-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-off-light);
+}
+
+button.home-button {
+  background: var(--color-brand-2);
+}
+
+button.survey-button {
+  width: auto;
+  padding: 0 1em;
+  font-size: 1rem;
+}
+
+button.user-profile-button {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.25rem;
+  background-image: url('src/assets/profile-avatar.jpeg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 2rem;
+}
+
+button.user-profile-button:hover::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-highlight);
+  border-radius: inherit;
+  mix-blend-mode: hard-light;
+  content: '';
+}
+
+.app-action-item:focus,
+button.home-button:focus,
+button.survey-button:focus {
+  background: var(--color-highlight);
+  outline: none;
+}
+
+.app-action-item:hover:not(:focus, :disabled),
+button.survey-button:hover:not(:focus, :disabled) {
+  color: var(--color-highlight);
+  fill: var(--color-highlight);
+}
