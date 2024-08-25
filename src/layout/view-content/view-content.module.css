@@ -5,4 +5,5 @@
   width: 100%;
   padding: 2rem;
   background: var(--color-background);
+  row-gap: 2rem;
 }

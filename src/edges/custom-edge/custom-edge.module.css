@@ -1,0 +1,6 @@
+.custom-edge {
+  margin: 2rem;
+  padding: 1rem;
+  color: var(--color-brand-2);
+  stroke: var(--color-brand-2);
+}

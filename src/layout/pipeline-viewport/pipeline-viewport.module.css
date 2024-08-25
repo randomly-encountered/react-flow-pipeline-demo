@@ -1,0 +1,22 @@
+.viewport-wrapper {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  column-gap: 2rem;
+}
+
+.viewport-card {
+  display: flex;
+  background: var(--color-light);
+  border-radius: 1rem;
+}
+
+.viewport-card.viewport {
+  flex-grow: 1;
+}
+
+.viewport-card.error-list {
+  flex-grow: 1;
+  max-width: 360px;
+  padding: 2rem;
+}

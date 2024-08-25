@@ -52,6 +52,12 @@
   inherits: true;
 }
 
+@property --color-border {
+  syntax: '<color>';
+  initial-value: rgb(199 198 200);
+  inherits: true;
+}
+
 :root {
   color: var(--color-dark);
   font-weight: normal;
@@ -72,6 +78,10 @@
   padding: 0;
   font-weight: inherit;
   font-family: inherit;
+}
+
+*:focus {
+  outline-color: var(--color-highlight);
 }
 
 a:hover,

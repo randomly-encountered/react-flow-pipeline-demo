@@ -16,11 +16,14 @@
     "@assets/*": "./src/assets/*",
     "@components/*": "./src/components/*",
     "@core/*": "./src/*",
-    "@layout/*": "./src/layout/*"
+    "@edges/*": "./src/edges/*",
+    "@layout/*": "./src/layout/*",
+    "@nodes/*": "./src/nodes/*"
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",
     "@tanstack/react-query": "^5.52.0",
+    "@xyflow/react": "^12.1.1",
     "classnames": "^2.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

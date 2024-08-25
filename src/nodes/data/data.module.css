@@ -1,0 +1,39 @@
+.data-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--color-primary);
+  background: var(--color-light);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.data-node.combined {
+  color: var(--color-light);
+  background: rgb(137 142 189);
+  border: none;
+  border-radius: 4rem;
+}
+
+.label {
+  position: absolute;
+  bottom: -2rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--color-off-dark);
+  font-size: 0.75rem;
+  background: var(--color-light);
+  border: 1px solid var(--color-background);
+  border-radius: 0.25rem;
+}
+
+.rule-count {
+  position: absolute;
+  bottom: -3.5rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--color-border);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  border-radius: 0.25rem;
+}
