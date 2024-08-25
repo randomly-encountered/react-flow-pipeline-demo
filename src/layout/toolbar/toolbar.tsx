@@ -1,9 +1,14 @@
 import { Tab } from '@components/tab'
 import { Tabs } from '@components/tabs'
+import { MOCK_JOB_DATA } from '@core/constants'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import styles from '@layout/toolbar/toolbar.module.css'
 
 export function Toolbar() {
+  const handleRetry = () => {
+    window.alert(`Job info \n${JSON.stringify(MOCK_JOB_DATA)}`)
+  }
+
   return (
     <section className={styles['toolbar']}>
       <Tabs>
@@ -22,7 +27,7 @@ export function Toolbar() {
           <Icon fontSize={20} icon='mdi:download-outline' />
           Download all outputs
         </button>
-        <button className={styles['primary']}>
+        <button className={styles['primary']} onClick={handleRetry}>
           Retry job
         </button>
       </aside>

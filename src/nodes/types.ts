@@ -18,7 +18,7 @@ export interface SourceDataNode extends Record<string, unknown> {
   asTarget?: boolean
   hasError?: boolean
   icon: string
-  error?: NodeError
+  errors?: NodeError[]
 }
 
 export interface NodeError {

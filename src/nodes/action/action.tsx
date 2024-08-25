@@ -7,10 +7,10 @@ export function ActionNode({ data }: NodeProps<Node<ActionNodeData>>) {
   return (
     <>
       <Handle position={Position.Left} type='target' />
-      <div className={styles['action-node']}>
+      <figure className={styles['action-node']}>
         <Icon icon={data.icon} />
         {data.label}
-      </div>
+      </figure>
       <Handle position={Position.Right} type='source' />
     </>
   )

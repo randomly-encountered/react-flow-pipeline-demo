@@ -10,15 +10,15 @@ export function DataNode({ data }: NodeProps<Node<DataNode>>) {
   return (
     <>
       {!data.isInput && <Handle position={Position.Left} type='target' />}
-      <div className={className}>
+      <figure className={className}>
         <Icon fontSize={24} icon='ion:layers-sharp' />
-        <caption className={styles['label']}>{data.label}</caption>
-        <caption className={styles['rule-count']}>
+        <figcaption className={styles['label']}>{data.label}</figcaption>
+        <figcaption className={styles['rule-count']}>
           {data.ruleCount}
           {' '}
           rules applied
-        </caption>
-      </div>
+        </figcaption>
+      </figure>
       <Handle position={Position.Right} type='source' />
     </>
   )

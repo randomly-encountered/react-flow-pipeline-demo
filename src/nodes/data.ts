@@ -115,11 +115,13 @@ export const EXAMPLE_NODES: Node[] = [
       asTarget: true,
       hasError: true,
       icon: 'logos:google-drive',
-      error: {
-        source: 'Pivoted dataset',
-        target: DataSource.AMAZON_RDS,
-        message: 'Column data type does not match with your database.',
-      },
+      errors: [
+        {
+          source: 'Pivoted dataset',
+          target: DataSource.AMAZON_RDS,
+          message: 'Column data type does not match with your database.',
+        },
+      ],
     },
     position: { x: 660, y: 170.5 },
   },

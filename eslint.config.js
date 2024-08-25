@@ -64,6 +64,7 @@ export default tseslint.config(
       ],
       '@stylistic/function-call-argument-newline': ['warn', 'consistent'],
       '@stylistic/function-paren-newline': ['warn', 'consistent'],
+      '@typescript-eslint/no-floating-promises': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
     },
     settings: {

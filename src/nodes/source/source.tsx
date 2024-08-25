@@ -6,14 +6,14 @@ import type { SourceDataNode } from '@nodes/types'
 
 export function SourceNode({ data }: NodeProps<Node<SourceDataNode>>) {
   const className = cx([styles['source-node'], data.hasError && styles['error']])
-  const hasError = !!data.error
+  const hasError = !!data.errors?.length
 
   return (
     <>
-      <div className={className}>
+      <figure className={className}>
         <Icon fontSize={20} icon={data.icon} />
         {hasError && <Icon className={styles['error-badge']} fontSize={20} icon='ion:alert-sharp' />}
-      </div>
+      </figure>
       {data.asTarget && <Handle position={Position.Left} type='target' />}
     </>
   )

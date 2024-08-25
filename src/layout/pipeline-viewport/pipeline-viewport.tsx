@@ -6,13 +6,16 @@ import {
   type NodeChange,
   type NodeTypes,
   ReactFlow,
+  ReactFlowState,
   applyNodeChanges,
   useNodesState,
+  useReactFlow,
+  useStore,
 } from '@xyflow/react'
 import { EXAMPLE_NODES, ActionNode, DataNode, SourceNode } from '@nodes/index'
 import { CustomEdge, EXAMPLE_EDGES } from '@edges/index'
 import { ErrorsList } from '@layout/errors-list'
-import type { ActionNodeData, NodeData, NodeError, SourceDataNode } from '@core/nodes/types'
+import type { ActionNodeData, NodeData, SourceDataNode } from '@core/nodes/types'
 import styles from '@layout/pipeline-viewport/pipeline-viewport.module.css'
 
 const edgeTypes: EdgeTypes = {
@@ -26,9 +29,13 @@ const nodeTypes: NodeTypes = {
 }
 
 export function PipelineViewport() {
+  const { fitView } = useReactFlow()
   const [nodes, setNodes, onNodesChange] = useNodesState(EXAMPLE_NODES)
   const [selectedNode, setSelectedNode] = useState<Node<SourceDataNode | NodeData | ActionNodeData>>()
-  const nodeError = selectedNode?.data?.error
+  const nodeErrors = selectedNode?.data?.errors as SourceDataNode['errors']
+  const hasErrors = !!nodeErrors?.length
+  const viewportWidth = useStore(viewportWidthSelector)
+  const viewportHeight = useStore(viewportHeightSelector)
 
   const handleNodesChange = (changes: NodeChange[]) => {
     onNodesChange(changes)
@@ -44,7 +51,15 @@ export function PipelineViewport() {
     }
 
     setSelectedNode(selectedNode)
-  }, [nodes])
+  }, [nodes, fitView])
+
+  useEffect(() => {
+    if (!selectedNode) return
+
+    requestAnimationFrame(() => {
+      fitView({ nodes: [selectedNode], duration: 1000, maxZoom: 1 })
+    })
+  }, [selectedNode, viewportHeight, viewportWidth, fitView])
 
   return (
     <div className={styles['viewport-wrapper']}>
@@ -59,12 +74,20 @@ export function PipelineViewport() {
           onNodesChange={handleNodesChange}
         />
       </div>
-      {!!nodeError
+      {hasErrors
       && (
-        <div className={`${styles['viewport-card']} ${styles['error-list']}`}>
-          <ErrorsList error={nodeError as NodeError} />
+        <div className={`${styles['error-list']}`}>
+          <ErrorsList errors={nodeErrors} />
         </div>
       )}
     </div>
   )
+}
+
+function viewportWidthSelector(state: ReactFlowState) {
+  return state.width
+}
+
+function viewportHeightSelector(state: ReactFlowState) {
+  return state.height
 }

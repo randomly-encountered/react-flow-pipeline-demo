@@ -4,3 +4,15 @@
   flex-grow: 1;
   gap: 1rem;
 }
+
+.title {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.title .icon {
+  color: var(--color-error);
+}

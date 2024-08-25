@@ -15,8 +15,10 @@
   flex-grow: 1;
 }
 
-.viewport-card.error-list {
+.error-list {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
-  max-width: 360px;
-  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
 }

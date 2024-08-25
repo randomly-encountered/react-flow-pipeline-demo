@@ -1,7 +1,4 @@
 .source-node {
-  --color-error: rgb(225 0 40);
-  --color-error-background: rgb(225 0 40 / 10%);
-  --color-error-shadow: rgb(108 7 25 / 12%);
   position: relative;
   display: flex;
   align-items: center;

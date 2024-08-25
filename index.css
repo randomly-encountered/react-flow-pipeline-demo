@@ -58,6 +58,24 @@
   inherits: true;
 }
 
+@property --color-error {
+  syntax: '<color>';
+  initial-value: rgb(225 0 40);
+  inherits: true;
+}
+
+@property --color-error-background {
+  syntax: '<color>';
+  initial-value: rgb(225 0 40 / 10%);
+  inherits: true;
+}
+
+@property --color-error-shadow {
+  syntax: '<color>';
+  initial-value: rgb(108 7 25 / 12%);
+  inherits: true;
+}
+
 :root {
   color: var(--color-dark);
   font-weight: normal;
