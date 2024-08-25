@@ -35,3 +35,13 @@
   background: var(--color-highlight);
   outline: none;
 }
+
+@media screen and (width < 800px) {
+  .breadcrumbs {
+    font-size: 0.875rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}

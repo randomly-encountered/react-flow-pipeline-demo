@@ -1,5 +1,5 @@
-import { JobAttribute } from '@components/job-attribute'
-import styles from '@layout/job-details-panel/job-details-panel.module.css'
+import { JobAttribute } from '@components/job-details/job-attribute'
+import styles from '@components/job-details/job-details.module.css'
 
 export interface JobDetails {
   pipelineName: string
@@ -15,7 +15,7 @@ export interface JobDetails {
 
 export function JobDetailsPanel(props: JobDetails) {
   return (
-    <dl className={styles['job-details-panel']}>
+    <dl className={styles['job-details']}>
       <JobAttribute label='Pipeline name'>{props.pipelineName}</JobAttribute>
       <JobAttribute label='Run by'>{props.initiator}</JobAttribute>
       <JobAttribute label='Start time'>{props.startTime}</JobAttribute>

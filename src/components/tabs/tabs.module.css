@@ -1,7 +1,6 @@
 .tabs {
   display: flex;
   margin: 0;
-  font-size: 1rem;
   column-gap: 0;
   list-style: none;
 }

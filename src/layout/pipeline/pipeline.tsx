@@ -14,9 +14,9 @@ import {
 } from '@xyflow/react'
 import { EXAMPLE_NODES, ActionNode, DataNode, SourceNode } from '@nodes/index'
 import { CustomEdge, EXAMPLE_EDGES } from '@edges/index'
-import { ErrorsList } from '@layout/errors-list'
+import { JobErrors } from '@components/job-errors'
 import type { ActionNodeData, NodeData, SourceDataNode } from '@core/nodes/types'
-import styles from '@layout/pipeline-viewport/pipeline-viewport.module.css'
+import styles from '@layout/pipeline/pipeline.module.css'
 
 const edgeTypes: EdgeTypes = {
   customEdge: CustomEdge,
@@ -28,7 +28,10 @@ const nodeTypes: NodeTypes = {
   sourceNode: SourceNode,
 }
 
-export function PipelineViewport() {
+/**
+ * Displays the pipeline flow diagram and any conditional details panel related to a selected node
+ */
+export function Pipeline() {
   const { fitView } = useReactFlow()
   const [nodes, setNodes, onNodesChange] = useNodesState(EXAMPLE_NODES)
   const [selectedNode, setSelectedNode] = useState<Node<SourceDataNode | NodeData | ActionNodeData>>()
@@ -62,12 +65,13 @@ export function PipelineViewport() {
   }, [selectedNode, viewportHeight, viewportWidth, fitView])
 
   return (
-    <div className={styles['viewport-wrapper']}>
-      <div className={`${styles['viewport-card']} ${styles['viewport']}`}>
+    <div className={styles['layout']}>
+      <div className={styles['viewport']}>
         <ReactFlow
           edgeTypes={edgeTypes}
           edges={EXAMPLE_EDGES}
           fitView
+          fitViewOptions={{ duration: 1000, maxZoom: 1 }}
           nodeTypes={nodeTypes}
           nodes={nodes}
           proOptions={{ hideAttribution: true }}
@@ -76,8 +80,8 @@ export function PipelineViewport() {
       </div>
       {hasErrors
       && (
-        <div className={`${styles['error-list']}`}>
-          <ErrorsList errors={nodeErrors} />
+        <div className={styles['job-errors']}>
+          <JobErrors errors={nodeErrors} />
         </div>
       )}
     </div>

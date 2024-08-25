@@ -1,4 +1,4 @@
-.job-details-panel {
+.job-details {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 @media screen and (width >= 640px) {
-  .job-details-panel {
+  .job-details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-height: none;
@@ -19,7 +19,7 @@
 }
 
 @media screen and (width >= 960px) {
-  .job-details-panel {
+  .job-details {
     grid-template-columns: repeat(3, 1fr);
   }
 }

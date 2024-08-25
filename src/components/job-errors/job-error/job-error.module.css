@@ -1,9 +1,10 @@
-.error-card {
+.job-error {
   display: grid;
   grid-template-areas:
     'icon title'
     '. message'
     '. actions';
+  grid-template-columns: auto 1fr;
   gap: 0.25rem 0.5rem;
   align-items: center;
   padding: 1rem;

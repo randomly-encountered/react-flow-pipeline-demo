@@ -114,7 +114,7 @@ export const EXAMPLE_NODES: Node[] = [
     data: {
       asTarget: true,
       hasError: true,
-      icon: 'logos:google-drive',
+      source: DataSource.AMAZON_RDS,
       errors: [
         {
           source: 'Pivoted dataset',
@@ -129,41 +129,35 @@ export const EXAMPLE_NODES: Node[] = [
     ...commonProps,
     id: '11',
     type: 'sourceNode',
-    data: {
-      asTarget: true,
-      icon: 'mdi:folder-network-outline',
-    },
+    data: { asTarget: true },
     position: { x: 996, y: 38.5 },
   },
   {
     ...commonProps,
     id: '12',
     type: 'sourceNode',
-    data: {
-      asTarget: true,
-      icon: 'mdi:folder-network-outline',
-    },
+    data: { asTarget: true },
     position: { x: 660, y: 302.5 },
   },
   {
     ...commonProps,
     id: '13',
     type: 'sourceNode',
-    data: { icon: 'mdi:folder-network-outline' },
+    data: {},
     position: { x: -32, y: 38.5 },
   },
   {
     ...commonProps,
     id: '14',
     type: 'sourceNode',
-    data: { icon: 'mdi:folder-network-outline' },
+    data: {},
     position: { x: -32, y: 170.5 },
   },
   {
     ...commonProps,
     id: '15',
     type: 'sourceNode',
-    data: { icon: 'logos:google-drive' },
+    data: { source: DataSource.GOOGLE_DRIVE },
     position: { x: -32, y: 302.5 },
   },
 ]

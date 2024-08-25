@@ -7,3 +7,10 @@
   background: var(--color-background);
   row-gap: 2rem;
 }
+
+@media screen and (width < 800px) {
+  .view-content {
+    padding: 1rem;
+    row-gap: 1rem;
+  }
+}

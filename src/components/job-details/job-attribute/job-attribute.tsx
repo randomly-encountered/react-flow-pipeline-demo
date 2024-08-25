@@ -1,5 +1,5 @@
 import { type PropsWithChildren } from 'react'
-import styles from '@components/job-attribute/job-attribute.module.css'
+import styles from '@components/job-details/job-attribute/job-attribute.module.css'
 
 interface JobAttributeProps {
   label: string

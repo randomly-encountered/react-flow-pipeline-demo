@@ -1,8 +1,11 @@
 .toolbar {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   align-items: flex-end;
   justify-content: space-between;
   padding: 0 2rem;
+  font-size: 1rem;
 }
 
 .toolbar-actions {
@@ -18,6 +21,12 @@
   align-items: center;
   column-gap: 0.25rem;
   border-radius: 0.25rem;
+}
+
+.primary,
+.secondary {
+  width: auto;
+  white-space: nowrap;
 }
 
 .primary {
@@ -44,4 +53,40 @@
 .secondary:focus,
 .secondary:hover {
   color: var(--color-highlight);
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media screen and (width < 800px) {
+  .primary,
+  .secondary,
+  .toolbar {
+    font-size: 0.875rem;
+  }
+
+  .toolbar {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (width < 580px) {
+  .mobile-only {
+    display: initial;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .primary,
+  .secondary {
+    padding: 0.25rem;
+    font-size: 1rem;
+  }
+
+  .toolbar-actions {
+    gap: 0.5rem;
+  }
 }

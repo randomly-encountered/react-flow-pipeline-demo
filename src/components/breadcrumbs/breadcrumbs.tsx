@@ -1,8 +1,8 @@
-import { Breadcrumb } from '@components/breadcrumb'
 import { Icon } from '@iconify/react/dist/iconify.js'
-import styles from '@layout/nav-breadcrumbs/nav-breadcrumbs.module.css'
+import { Breadcrumb } from '@components/breadcrumbs/breadcrumb'
+import styles from '@components/breadcrumbs/breadcrumbs.module.css'
 
-export function NavigationBreadcrumbs() {
+export function Breadcrumbs() {
   return (
     <nav className={styles['container']}>
       <ul className={styles['breadcrumbs']}>
