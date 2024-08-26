@@ -85,3 +85,13 @@ button.survey-button:hover:not(:focus, :disabled) {
   color: var(--color-highlight);
   fill: var(--color-highlight);
 }
+
+@media (prefers-color-scheme: dark) {
+  .navigation-panel button {
+    color: var(--color-dark);
+  }
+
+  button.home-button {
+    color: var(--color-background);
+  }
+}

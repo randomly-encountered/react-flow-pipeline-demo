@@ -3,7 +3,7 @@ import { DataSource } from '@nodes/data'
 import rdsIcon from '@assets/rds-logo.png'
 import styles from '@components/job-errors/job-error/job-error.module.css'
 
-export function getErrorCardIcon(dataSource?: DataSource) {
+export function getJobErrorIcon(dataSource?: DataSource) {
   const iconMap = {
     [DataSource.AMAZON_RDS]: () => (
       <img alt='data source' className={styles['icon']} src={rdsIcon} />

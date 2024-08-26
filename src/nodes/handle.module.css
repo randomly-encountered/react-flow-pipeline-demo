@@ -1,0 +1,16 @@
+.handle {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: transparent;
+  border: 1.5px solid var(--color-brand-2);
+  border-radius: 0.5rem;
+}
+
+.handle.target {
+  background: var(--color-brand-2);
+  transform: translate3d(-150%, -50%, 0);
+}
+
+.handle.source {
+  transform: translate3d(150%, -50%, 0);
+}

@@ -76,6 +76,24 @@
   inherits: true;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: rgb(19 20 20);
+    --color-light: rgb(26 28 29);
+    --color-off-light: rgb(200 198 199);
+    --color-dark: rgb(255 255 255);
+    --color-off-dark: rgb(156 163 163);
+    --color-highlight: rgb(255 176 50);
+    --color-border: rgb(116 129 129);
+    --color-primary: rgb(21 200 255);
+    --color-brand-1: rgb(0 45 70);
+    --color-brand-2: rgb(16 193 161);
+    --color-error: rgb(255 129 18);
+    --color-error-background: rgb(255 129 18 / 10%);
+    --color-error-shadow: rgb(255 129 18 / 12%);
+  }
+}
+
 :root {
   color: var(--color-dark);
   font-weight: normal;

@@ -1,7 +1,7 @@
 import { MouseEvent } from 'react'
 import type { NodeError } from '@core/nodes/types'
 import styles from '@components/job-errors/job-error/job-error.module.css'
-import { getErrorCardIcon } from '@components/job-errors/job-error'
+import { getJobErrorIcon } from '@components/job-errors/job-error'
 
 export function JobError(props: NodeError) {
   const { source, target, message } = props
@@ -14,7 +14,7 @@ export function JobError(props: NodeError) {
 
   return (
     <div className={styles['job-error']}>
-      {getErrorCardIcon(target)}
+      {getJobErrorIcon(target)}
       <h3 className={styles['title']}>
         Export of '
         <em>{source}</em>

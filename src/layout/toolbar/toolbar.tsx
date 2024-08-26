@@ -29,11 +29,11 @@ export function Toolbar() {
       </aside>
       <aside className={styles['toolbar-actions']}>
         <button className={styles['secondary']}>
-          <Icon fontSize={20} icon='mdi:download-outline' />
+          <Icon fontSize={20} icon='lucide:download' />
           <label className={styles['desktop-only']}>Download all outputs</label>
         </button>
         <button className={styles['primary']} onClick={handleRetry}>
-          <Icon className={styles['mobile-only']} fontSize={20} icon='mdi:refresh' />
+          <Icon className={styles['mobile-only']} fontSize={20} icon='lucide:refresh-cw' />
           <label className={styles['desktop-only']}>Retry job</label>
         </button>
       </aside>

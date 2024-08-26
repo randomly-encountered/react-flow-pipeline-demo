@@ -4,8 +4,8 @@ const commonProps = {
   markerEnd: {
     color: 'var(--color-brand-2)',
     type: MarkerType.ArrowClosed,
-    width: 20,
-    height: 20,
+    width: 32,
+    height: 32,
   },
   deletable: false,
   focusable: false,

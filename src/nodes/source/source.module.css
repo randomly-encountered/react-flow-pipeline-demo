@@ -14,7 +14,7 @@
 
 .source-node.error {
   color: var(--color-light);
-  background: rgb(225 0 40 / 10%);
+  background: var(--color-error-background);
   border-color: var(--color-error);
   border-radius: 4rem;
   box-shadow: 0 4px 4px var(--color-error-shadow);
